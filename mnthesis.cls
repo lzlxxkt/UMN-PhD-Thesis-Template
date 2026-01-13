@@ -21,7 +21,7 @@
 % 01/05/2022 Fixed a bug where the table of contents did not link to the right page for the abstract. - Kexin Feng
 % 03/21/2025 Fixed underfull hbox warning. - Trevor Karn
 % 08/05/2025 Fixed a compilation error caused by a duplicated \ifacknowledgements{}, fixed the "Token not allowed in a PDF string" warnings for appendices, properly defined the class name, and deleted the comma separating month and year. - Mykhaylo Malakhov
-
+% 01/13/2026 Restored full-page distribution of the title page; substituted \LoadClass{} with \LoadClassWithOptions{} to enable the options set in the main text. -FY  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,7 +70,7 @@
 % The mnthesis document class is based on the report document class.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProvidesClass{mnthesis}
-\LoadClass{report}
+\LoadClassWithOptions{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,7 +298,7 @@
         \@month~\@year\\
       \fi %close ifdraft
     }
-  \vfill
+  %\vfill
   }
   \newpage
 }% end titlep
